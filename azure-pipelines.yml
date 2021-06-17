@@ -27,7 +27,7 @@ steps:
   displayName: 'Use Python $(python.version)'
 - task: Bash@3
   inputs:
-    filePath: '/bin/ls'
+    filePath: 'ls'
     arguments: '-all'
 
 - script: |
