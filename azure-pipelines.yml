@@ -25,9 +25,9 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
-- task: BatchScript@1
+- task: Bash@3
   inputs:
-    filename: '/bin/ls'
+    filePath: '/bin/ls'
     arguments: '-all'
 
 - script: |
