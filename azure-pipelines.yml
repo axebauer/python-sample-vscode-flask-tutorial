@@ -19,11 +19,16 @@ strategy:
     Python37:
       python.version: '3.7'
 
+
 steps:
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
+- task: BatchScript@1
+  inputs:
+    filename: '/tmp/test.sh'
+    arguments: 'holla die waldfee'
 
 - script: |
     python -m pip install --upgrade pip
